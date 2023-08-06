@@ -3,7 +3,7 @@
     --white-color: #fafafa;
     --background-color: #121212;
     --win-text: "win";
-    --draw-text: "draw";
+    --tie-text: "tie";
 }
 
 * {
@@ -51,6 +51,10 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     background-image: var(--mark-icon);
+}
+
+#title {
+    font-size: 48px;
 }
 
 #title span {

@@ -45,6 +45,6 @@
 ):has(
     .board .p-2-2:checked
 ) {
-    --game-draw: var(--draw-text);
+    --game-draw: var(--tie-text);
     --game-mark-display: none;
 }
