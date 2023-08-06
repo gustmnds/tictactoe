@@ -19,7 +19,7 @@ body {
     background-color: #121212;
 }
 
-.board {
+.board, noscript {
     width: 384px;
     height: 384px;
     
