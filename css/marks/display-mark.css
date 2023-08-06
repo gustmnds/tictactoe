@@ -1,3 +1,4 @@
+/*display X marks*/
 #game-board:has(.board-x .p-0-0:checked) .display .p-0-0,
 #game-board:has(.board-x .p-1-0:checked) .display .p-1-0,
 #game-board:has(.board-x .p-2-0:checked) .display .p-2-0,
@@ -10,7 +11,7 @@
     --mark-icon: url(../assets/svg/x.svg);
 }
 
-
+/*display O marks*/
 #game-board:has(.board-o .p-0-0:checked) .display .p-0-0,
 #game-board:has(.board-o .p-1-0:checked) .display .p-1-0,
 #game-board:has(.board-o .p-2-0:checked) .display .p-2-0,
@@ -23,6 +24,7 @@
     --mark-icon: url(../assets/svg/o.svg);
 }
 
+/*Hide checkbox from X and O board to prevent unchecks*/
 #game-board:has(.board input.p-0-0:checked) .board input.p-0-0,
 #game-board:has(.board input.p-1-0:checked) .board input.p-1-0,
 #game-board:has(.board input.p-2-0:checked) .board input.p-2-0,

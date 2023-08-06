@@ -14,45 +14,49 @@
     <link rel="stylesheet" href="css/marks/positions.css">
     <link rel="stylesheet" href="css/marks/marks.css">
     <link rel="stylesheet" href="css/marks/display-mark.css">
+    <link rel="stylesheet" href="css/marks/win-check.css">
 </head>
 <body>
-    <noscript>
-        <h1 id="title">TicTacToe<span>.css</span></h1>
-        <div id="game-board">
-            <div class="board board-x">
-                <input type="checkbox" class="mark p-0-0">
-                <input type="checkbox" class="mark p-1-0">
-                <input type="checkbox" class="mark p-2-0">
-                <input type="checkbox" class="mark p-0-1">
-                <input type="checkbox" class="mark p-1-1">
-                <input type="checkbox" class="mark p-2-1">
-                <input type="checkbox" class="mark p-0-2">
-                <input type="checkbox" class="mark p-1-2">
-                <input type="checkbox" class="mark p-2-2">
+    <div id="game-board">
+        <noscript>
+            <h1 id="title">TicTacToe<span>.css</span></h1>
+            <div id="boards">
+                <div class="board board-x">
+                    <input type="checkbox" class="mark p-0-0">
+                    <input type="checkbox" class="mark p-1-0">
+                    <input type="checkbox" class="mark p-2-0">
+                    <input type="checkbox" class="mark p-0-1">
+                    <input type="checkbox" class="mark p-1-1">
+                    <input type="checkbox" class="mark p-2-1">
+                    <input type="checkbox" class="mark p-0-2">
+                    <input type="checkbox" class="mark p-1-2">
+                    <input type="checkbox" class="mark p-2-2">
+                </div>
+                <div class="board board-o">
+                    <input type="checkbox" class="mark p-0-0">
+                    <input type="checkbox" class="mark p-1-0">
+                    <input type="checkbox" class="mark p-2-0">
+                    <input type="checkbox" class="mark p-0-1">
+                    <input type="checkbox" class="mark p-1-1">
+                    <input type="checkbox" class="mark p-2-1">
+                    <input type="checkbox" class="mark p-0-2">
+                    <input type="checkbox" class="mark p-1-2">
+                    <input type="checkbox" class="mark p-2-2">
+                </div>
+                <div class="board display">
+                    <div class="mark-display p-0-0"></div>
+                    <div class="mark-display p-1-0"></div>
+                    <div class="mark-display p-2-0"></div>
+                    <div class="mark-display p-0-1"></div>
+                    <div class="mark-display p-1-1"></div>
+                    <div class="mark-display p-2-1"></div>
+                    <div class="mark-display p-0-2"></div>
+                    <div class="mark-display p-1-2"></div>
+                    <div class="mark-display p-2-2"></div>
+                </div>
             </div>
-            <div class="board board-o">
-                <input type="checkbox" class="mark p-0-0">
-                <input type="checkbox" class="mark p-1-0">
-                <input type="checkbox" class="mark p-2-0">
-                <input type="checkbox" class="mark p-0-1">
-                <input type="checkbox" class="mark p-1-1">
-                <input type="checkbox" class="mark p-2-1">
-                <input type="checkbox" class="mark p-0-2">
-                <input type="checkbox" class="mark p-1-2">
-                <input type="checkbox" class="mark p-2-2">
-            </div>
-            <div class="board display">
-                <div class="mark-display p-0-0"></div>
-                <div class="mark-display p-1-0"></div>
-                <div class="mark-display p-2-0"></div>
-                <div class="mark-display p-0-1"></div>
-                <div class="mark-display p-1-1"></div>
-                <div class="mark-display p-2-1"></div>
-                <div class="mark-display p-0-2"></div>
-                <div class="mark-display p-1-2"></div>
-                <div class="mark-display p-2-2"></div>
-            </div>
-        </div>
-    </noscript>
+            <h1 id="game-status"></h1>
+        </noscript>
+    </div>
 </body>
 </html>

@@ -1,26 +1,32 @@
+:root {
+    --primary-color: #2095f2;
+    --white-color: #fafafa;
+    --background-color: #121212;
+    --win-text: "win";
+    --draw-text: "draw";
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    color: #fafafa;
+    color: var(--white-color);
     font-family: 'Roboto', sans-serif;
 }
 
-body {
-    width: 100%;
-    height: 100%;
-    background-color: #121212;
-}
-
-noscript {
+noscript, body {
     width: 100vw;
     height: 100vh;
-
+    
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 1rem;
+}
+
+body {
+    background-color: var(--background-color);
 }
 
 .board {
@@ -37,7 +43,7 @@ noscript {
 
 .mark-display{
     display: block;
-    background-color: burlywood;
+    background-color: var(--primary-color);
 
     border-radius: 8px;
 
@@ -48,16 +54,24 @@ noscript {
 }
 
 #title span {
-    color: #2095f2;
+    color: var(--primary-color);
 }
 
-#game-board {
+#boards {
     display: flex;
     justify-content: center;
     align-items: center;
 
     width: 416px;
     height: 416px;
+}
+
+#game-board {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
 }
 
 .display {
@@ -68,39 +82,34 @@ noscript {
     appearance: none;
     width: min(128px, var(--size));
     height: min(128px, var(--size));
+    display: var(--game-mark-display, block);
 }
 
 .mark:checked {
     --size: 0px;
 }
 
-.board-x {
-    --mark-color: red;
-    --exp: calc(
-        (var(--mark-count) - 1) * 
-        (var(--mark-count) - 3) * 
-        (var(--mark-count) - 5) * 
-        (var(--mark-count) - 7)
-    );
-
-    --exp_2: calc(var(--exp) * var(--exp)); 
-    --size: calc(128px * var(--exp_2));
-    
-    z-index: var(--exp_2);
+#game-status {
+    height: 80px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
 }
 
-.board-o {
-    --mark-color: green;
-    --exp: calc(
-        (var(--mark-count) - 0) * 
-        (var(--mark-count) - 2) * 
-        (var(--mark-count) - 4) * 
-        (var(--mark-count) - 6) * 
-        (var(--mark-count) - 8)
-    );
+#game-status::before {
+    content: " ";
+    background-image: var(--game-win-mark);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: var(--game-win-mark-size);
+    width: var(--game-win-mark-size);
+    height: var(--game-win-mark-size);
+}
 
-    --exp_2: calc(var(--exp) * var(--exp)); 
-    --size: calc(128px * var(--exp_2));
-    
-    z-index: var(--exp_2);
+#game-status::after {
+    content: var(--game-win-display, var(--game-draw, " "));
+    font-size: 64px;
+    font-weight: normal;
 }

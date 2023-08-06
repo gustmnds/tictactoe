@@ -1,0 +1,50 @@
+#game-board:has(.board-x .p-0-0:checked):has(.board-x .p-1-0:checked):has(.board-x .p-2-0:checked),
+#game-board:has(.board-x .p-0-1:checked):has(.board-x .p-1-1:checked):has(.board-x .p-2-1:checked),
+#game-board:has(.board-x .p-0-2:checked):has(.board-x .p-1-2:checked):has(.board-x .p-2-2:checked),
+#game-board:has(.board-x .p-0-0:checked):has(.board-x .p-0-1:checked):has(.board-x .p-0-2:checked),
+#game-board:has(.board-x .p-1-0:checked):has(.board-x .p-1-1:checked):has(.board-x .p-1-2:checked),
+#game-board:has(.board-x .p-2-0:checked):has(.board-x .p-2-1:checked):has(.board-x .p-2-2:checked),
+#game-board:has(.board-x .p-0-0:checked):has(.board-x .p-1-1:checked):has(.board-x .p-2-2:checked),
+#game-board:has(.board-x .p-2-0:checked):has(.board-x .p-1-1:checked):has(.board-x .p-0-2:checked) {
+    --game-win-display: var(--win-text);
+    --game-win-mark-size: 80px;
+    --game-win-mark: url(../assets/svg/x.svg);
+    --game-mark-display: none;
+}
+
+#game-board:has(.board-o .p-0-0:checked):has(.board-o .p-1-0:checked):has(.board-o .p-2-0:checked),
+#game-board:has(.board-o .p-0-1:checked):has(.board-o .p-1-1:checked):has(.board-o .p-2-1:checked),
+#game-board:has(.board-o .p-0-2:checked):has(.board-o .p-1-2:checked):has(.board-o .p-2-2:checked),
+#game-board:has(.board-o .p-0-0:checked):has(.board-o .p-0-1:checked):has(.board-o .p-0-2:checked),
+#game-board:has(.board-o .p-1-0:checked):has(.board-o .p-1-1:checked):has(.board-o .p-1-2:checked),
+#game-board:has(.board-o .p-2-0:checked):has(.board-o .p-2-1:checked):has(.board-o .p-2-2:checked),
+#game-board:has(.board-o .p-0-0:checked):has(.board-o .p-1-1:checked):has(.board-o .p-2-2:checked),
+#game-board:has(.board-o .p-2-0:checked):has(.board-o .p-1-1:checked):has(.board-o .p-0-2:checked) {
+    --game-win-display: var(--win-text);
+    --game-win-mark-size: 80px;
+    --game-win-mark: url(../assets/svg/o.svg);
+    --game-mark-display: none;
+}
+
+#game-board:has(
+    .board .p-0-0:checked
+):has(
+    .board .p-1-0:checked
+):has(
+    .board .p-2-0:checked
+):has(
+    .board .p-0-1:checked
+):has(
+    .board .p-1-1:checked
+):has(
+    .board .p-2-1:checked
+):has(
+    .board .p-0-2:checked
+):has(
+    .board .p-1-2:checked
+):has(
+    .board .p-2-2:checked
+) {
+    --game-draw: var(--draw-text);
+    --game-mark-display: none;
+}

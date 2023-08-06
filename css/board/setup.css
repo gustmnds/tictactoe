@@ -11,3 +11,29 @@
         var(--p-2-2-mark, 0)
     );
 }
+
+.board-x {
+    --exp: calc(
+        (var(--mark-count) - 1) * 
+        (var(--mark-count) - 3) * 
+        (var(--mark-count) - 5) * 
+        (var(--mark-count) - 7)
+    );
+}
+
+.board-o {
+    --exp: calc(
+        (var(--mark-count) - 0) * 
+        (var(--mark-count) - 2) * 
+        (var(--mark-count) - 4) * 
+        (var(--mark-count) - 6) * 
+        (var(--mark-count) - 8)
+    );
+}
+
+.board-o, .board-x {
+    --exp_2: calc(var(--exp) * var(--exp)); 
+    --size: calc(128px * var(--exp_2));
+    
+    z-index: var(--exp_2);
+}
