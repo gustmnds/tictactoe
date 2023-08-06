@@ -1,0 +1,36 @@
+#game-board:has(.board-x .p-0-0:checked) .display .p-0-0,
+#game-board:has(.board-x .p-1-0:checked) .display .p-1-0,
+#game-board:has(.board-x .p-2-0:checked) .display .p-2-0,
+#game-board:has(.board-x .p-0-1:checked) .display .p-0-1,
+#game-board:has(.board-x .p-1-1:checked) .display .p-1-1,
+#game-board:has(.board-x .p-2-1:checked) .display .p-2-1,
+#game-board:has(.board-x .p-0-2:checked) .display .p-0-2,
+#game-board:has(.board-x .p-1-2:checked) .display .p-1-2,
+#game-board:has(.board-x .p-2-2:checked) .display .p-2-2 {
+    --mark-icon: url(../assets/svg/x.svg);
+}
+
+
+#game-board:has(.board-o .p-0-0:checked) .display .p-0-0,
+#game-board:has(.board-o .p-1-0:checked) .display .p-1-0,
+#game-board:has(.board-o .p-2-0:checked) .display .p-2-0,
+#game-board:has(.board-o .p-0-1:checked) .display .p-0-1,
+#game-board:has(.board-o .p-1-1:checked) .display .p-1-1,
+#game-board:has(.board-o .p-2-1:checked) .display .p-2-1,
+#game-board:has(.board-o .p-0-2:checked) .display .p-0-2,
+#game-board:has(.board-o .p-1-2:checked) .display .p-1-2,
+#game-board:has(.board-o .p-2-2:checked) .display .p-2-2 {
+    --mark-icon: url(../assets/svg/o.svg);
+}
+
+#game-board:has(.board input.p-0-0:checked) .board input.p-0-0,
+#game-board:has(.board input.p-1-0:checked) .board input.p-1-0,
+#game-board:has(.board input.p-2-0:checked) .board input.p-2-0,
+#game-board:has(.board input.p-0-1:checked) .board input.p-0-1,
+#game-board:has(.board input.p-1-1:checked) .board input.p-1-1,
+#game-board:has(.board input.p-2-1:checked) .board input.p-2-1,
+#game-board:has(.board input.p-0-2:checked) .board input.p-0-2,
+#game-board:has(.board input.p-1-2:checked) .board input.p-1-2,
+#game-board:has(.board input.p-2-2:checked) .board input.p-2-2 {
+    display: none;
+}

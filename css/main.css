@@ -1,0 +1,91 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    background-color: #121212;
+}
+
+.board {
+    width: 384px;
+    height: 384px;
+    
+    display: grid;
+    position: absolute;
+
+    gap: 1rem;
+    grid-template-columns: 128px 128px 128px;
+    grid-template-rows: 128px 128px 128px;
+}
+
+.mark-display{
+    display: block;
+    background-color: burlywood;
+
+    border-radius: 8px;
+
+    background-size: 128px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: var(--mark-icon);
+}
+
+#game-board {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.display {
+    z-index: -1;
+}
+
+.mark {
+    appearance: none;
+    width: min(128px, var(--size));
+    height: min(128px, var(--size));
+}
+
+.mark:checked {
+    --size: 0px;
+}
+
+.board-x {
+    --mark-color: red;
+    --exp: calc(
+        (var(--mark-count) - 1) * 
+        (var(--mark-count) - 3) * 
+        (var(--mark-count) - 5) * 
+        (var(--mark-count) - 7)
+    );
+
+    --exp_2: calc(var(--exp) * var(--exp)); 
+    --size: calc(128px * var(--exp_2));
+    
+    z-index: var(--exp_2);
+}
+
+.board-o {
+    --mark-color: green;
+    --exp: calc(
+        (var(--mark-count) - 0) * 
+        (var(--mark-count) - 2) * 
+        (var(--mark-count) - 4) * 
+        (var(--mark-count) - 6) * 
+        (var(--mark-count) - 8)
+    );
+
+    --exp_2: calc(var(--exp) * var(--exp)); 
+    --size: calc(128px * var(--exp_2));
+    
+    z-index: var(--exp_2);
+}

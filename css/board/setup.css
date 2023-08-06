@@ -1,0 +1,13 @@
+#game-board {
+    --mark-count: calc(
+        var(--p-0-0-mark, 0) +
+        var(--p-1-0-mark, 0) +
+        var(--p-2-0-mark, 0) +
+        var(--p-0-1-mark, 0) +
+        var(--p-1-1-mark, 0) +
+        var(--p-2-1-mark, 0) +
+        var(--p-0-2-mark, 0) +
+        var(--p-1-2-mark, 0) +
+        var(--p-2-2-mark, 0)
+    );
+}
